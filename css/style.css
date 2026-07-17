@@ -1,0 +1,479 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#EAF4EC;
+    color:#2F3E46;
+    padding:40px;
+    transition:.3s;
+}
+
+/* ================= Header ================= */
+
+.header{
+    position:relative;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.greeting-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+#greeting{
+    font-size:2.4rem;
+    font-weight:700;
+}
+
+#current-date{
+    margin-top:10px;
+    color:#5B6B5F;
+    font-size:1rem;
+}
+
+#clock{
+    margin-top:10px;
+    font-size:2.6rem;
+    color:#5C8D4E;
+    font-weight:bold;
+}
+
+/* Tombol Theme */
+#theme-btn{
+    position:absolute;
+    top:0;
+    right:0;
+
+    width:50px;
+    height:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+    border:none;
+    border-radius:50%;
+
+    font-size:22px;
+    line-height:1;
+}
+
+/* Tombol Edit Nama */
+#change-name-btn{
+    width:38px;
+    height:38px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+    border:none;
+    border-radius:50%;
+
+    font-size:16px;
+    line-height:1;
+}
+
+/* ================= Dashboard ================= */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:#4E7A42;
+
+}
+
+/* ================= Timer ================= */
+
+#timer-display{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    font-weight:bold;
+
+    margin:35px 0;
+
+    color:#5C8D4E;
+
+}
+
+.timer-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+}
+
+/* ================= Button ================= */
+
+button{
+
+    background:#5C8D4E;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#4E7A42;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= Input ================= */
+
+.task-input,
+.link-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+input{
+
+    flex:1;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid #d6e4d4;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+input:focus{
+
+    border-color:#5C8D4E;
+
+}
+
+/* ================= Task ================= */
+
+#task-list{
+
+    list-style:none;
+
+}
+
+#task-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#F7FBF6;
+
+    border:1px solid #dce9d8;
+
+    border-radius:12px;
+
+    padding:12px 15px;
+
+    margin-bottom:12px;
+
+}
+
+.task-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.task-right{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.task-right button{
+
+    padding:7px 12px;
+
+    font-size:13px;
+
+}
+
+/* ================= Quick Links ================= */
+
+.links-section{
+
+    margin-top:25px;
+
+}
+
+#quick-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+#quick-links a{
+
+    text-decoration:none;
+
+    background:#A7C957;
+
+    color:#243321;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+#quick-links a:hover{
+
+    background:#8CBF3F;
+
+    transform:translateY(-2px);
+
+}
+
+.quick-link-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:white;
+
+    border-radius:999px;
+
+    padding:5px;
+
+    border:1px solid #d6e4d4;
+
+}
+
+.quick-link-item a{
+
+    text-decoration:none;
+
+    color:#2F3E46;
+
+    background:#A7C957;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+}
+
+.quick-link-item button{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    padding:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:14px;
+}
+
+.dark .quick-link-item{
+
+    background:#30473A;
+
+    border:1px solid #47614F;
+
+}
+
+.dark .quick-link-item a{
+
+    background:#5C8D4E;
+
+    color:white;
+
+}
+
+/* ================= Dark Mode ================= */
+
+.dark{
+
+    background:#16231A;
+
+    color:#F4F4F4;
+
+}
+
+.dark .card{
+
+    background:#24372B;
+
+    box-shadow:none;
+
+}
+
+.dark .card h2{
+
+    color:#A7C957;
+
+}
+
+.dark #current-date{
+
+    color:#D3E3D2;
+
+}
+
+.dark #clock{
+
+    color:#A7C957;
+
+}
+
+.dark input{
+
+    background:#324A39;
+
+    color:white;
+
+    border:1px solid #506A57;
+
+}
+
+.dark #task-list li{
+
+    background:#30473A;
+
+    border-color:#47614F;
+
+}
+
+.dark #quick-links a{
+
+    background:#5C8D4E;
+
+    color:white;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:900px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .task-input,
+    .link-input{
+
+        flex-direction:column;
+
+    }
+
+    .timer-buttons{
+
+        flex-wrap:wrap;
+
+    }
+
+}

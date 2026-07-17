@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Life Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="top-bar">
+
+            <div class="greeting-row">
+
+                <h1 id="greeting"></h1>
+
+                <button id="change-name-btn" title="Change Name">
+                    ✏️
+                </button>
+
+            </div>
+
+            <button id="theme-btn" title="Toggle Theme">
+                🌙
+            </button>
+
+        </div>
+
+        <p id="current-date"></p>
+
+        <h2 id="clock"></h2>
+
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+
+        <!-- Focus Timer -->
+        <section class="card">
+
+            <h2>⏱ Focus Timer</h2>
+
+            <div id="timer-display">
+                25:00
+            </div>
+
+            <div class="timer-buttons">
+
+                <button id="start-btn">
+                    Start
+                </button>
+
+                <button id="stop-btn">
+                    Stop
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- To Do List -->
+        <section class="card">
+
+            <h2>📝 Today's Tasks</h2>
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Enter a task..."
+                >
+
+                <button id="add-task-btn">
+                    Add
+                </button>
+
+            </div>
+
+            <ul id="task-list"></ul>
+
+        </section>
+
+    </main>
+
+    <!-- Quick Links -->
+    <section class="card links-section">
+
+        <h2>🔗 Quick Links</h2>
+
+        <div id="quick-links"></div>
+
+        <div class="link-input">
+
+            <input
+                type="text"
+                id="link-name"
+                placeholder="Website Name"
+            >
+
+            <input
+                type="url"
+                id="link-url"
+                placeholder="https://example.com"
+            >
+
+            <button id="add-link-btn">
+                Add Link
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
